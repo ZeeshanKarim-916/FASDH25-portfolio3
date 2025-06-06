@@ -21,7 +21,7 @@ print(df_topic_model.columns)
 df_merged = pd.merge(df_length, df_topic_model, on=['year', 'month', 'day'], how='inner')  #Code taken from Chatgpt, AI chat3
 
 
-# Filter out rows where 'Topic' is -1 ---
+# Filter out rows where 'Topic' is -1
 df_filtered = df_merged[df_merged['Topic'] != -1]
 
 print(df_filtered.head())
